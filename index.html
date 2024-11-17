@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Used Car Sales</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Used Car Sales</h1>
+  </header>
+  <!-- Fliter for cars -->
+  <section class="filters">
+    <h2>Filter Options</h2>
+    <form id="filterForm">
+      <label>
+        Min Year:
+        <input type="number" id="min-year" placeholder="2014">
+      </label>
+      <label>
+        Max Year:
+        <input type="number" id="max-year" placeholder="2020">
+      </label>
+      <label>
+        Car Make:
+        <select id="make">
+            <option value="">-- Select Make --</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Ford">Ford</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Subaru">Subaru</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Kia">Kia</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Cadillac">Cadillac</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Lexus">Lexus</option>
+            <option value="BMW">BMW</option>
+        </select>
+      </label>
+      <label>
+        Max Mileage:
+        <input type="number" id="max-mileage" placeholder="60000">
+      </label>
+      <label>
+        Min Mileage:
+        <input type="number" id="min-mileage" placeholder="0">
+      </label>
+      <label>
+        Min Price:
+        <input type="number" id="min-price" placeholder="Enter Number">
+      </label>
+      <label>
+        Max Price:
+        <input type="number" id="max-price" placeholder="Enter Number">
+      </label>
+      <label>
+        Color:
+        <select id="color">
+            <option value="">-- Color does not match picture --</option>
+            <option value="Silver">Silver</option>
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+            <option value="Gray">Gray</option>
+            <option value="Green">Green</option>
+        </select>
+      </label>
+      <button type="button" id="filter-button">Filter Cars</button>
+    </form>
+  </section>
+  
+  <section id="car-listings">
+      <!-- Cards for the cars -->
+      <div class="card" data-make="Toyota" data-color="Silver" data-price="18000" data-mileage="30000" data-year="2018">
+        <img src="./assets/images/Toyota_Camry_18.jpg" alt="Toyota Camry 2018">
+        <h1>Toyota Camry 2018</h1>
+        <p class="price">$18,000</p>
+        <p class="mileage">Miles: 30,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Honda" data-color="White" data-price="14000" data-mileage="45000" data-year="2016">
+        <img src="./assets/images/Honda_Civic_16.jpg" alt="Honda Civic 2016">
+        <h1>Honda Civic 2016</h1>
+        <p class="price">$14,000</p>
+        <p class="mileage">Miles: 45,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Ford" data-color="Black" data-price="16000" data-mileage="35000" data-year="2017">
+        <img src="./assets/images/Ford_Fusion_17.jpg" alt="Ford Fusion 2017">
+        <h1>Ford Fusion 2017</h1>
+        <p class="price">$16,000</p>
+        <p class="mileage">Miles: 35,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Nissan" data-color="Blue" data-price="17000" data-mileage="25000" data-year="2019">
+        <img src="./assets/images/Nissan_Altima_19.jpg" alt="Nissan Altima 2019">
+        <h1>Nissan Altima 2019</h1>
+        <p class="price">$17,000</p>
+        <p class="mileage">Miles: 25,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="BMW" data-color="Black" data-price="27000" data-mileage="50000" data-year="2016">
+        <img src="./assets/images/BMW_5series_16.jpg" alt="BMW 5 Series 2016">
+        <h1>BMW 5-Series 2016</h1>
+        <p class="price">$27,000</p>
+        <p class="mileage">Miles: 50,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Cadillac" data-color="Red" data-price="32000" data-mileage="28000" data-year="2017">
+        <img src="./assets/images/Cadillac_XT5_17.jpg" alt="Cadillac XT5 2017">
+        <h1>Cadillac XT5 2017</h1>
+        <p class="price">$32,000</p>
+        <p class="mileage">Miles: 28,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Chevrolet" data-color="Red" data-price="12000" data-mileage="50000" data-year="2015">
+        <img src="./assets/images/Chevrolet_Malibu_15.jpg" alt="Chevrolet Malibu 2015">
+        <h1>Chevrolet Malibu 2015</h1>
+        <p class="price">$12,000</p>
+        <p class="mileage">Miles: 50,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Dodge" data-color="Black" data-price="24000" data-mileage="30000" data-year="2015">
+        <img src="./assets/images/Dodge_Challenger_15.jpg" alt="Dodge Challenger 2015">
+        <h1>Dodge Challenger 2015</h1>
+        <p class="price">$24,000</p>
+        <p class="mileage">Miles: 30,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Hyundai" data-color="Sliver" data-price="16000" data-mileage="22000" data-year="2020">
+        <img src="./assets/images/Hyundai_Elantra_20.jpg" alt="Hyundai Elantra 2020">
+        <h1>Hyundai Elantra 2020</h1>
+        <p class="price">$16,000</p>
+        <p class="mileage">Miles: 22,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Jaguar" data-color="Blue" data-price="38000" data-mileage="26000" data-year="2018">
+        <img src="./assets/images/Jaguar_F-PACE_18.jpg" alt="Jaguar F-PACE 2018">
+        <h1>Jaguar F-PACE 2018</h1>
+        <p class="price">$17,000</p>
+        <p class="mileage">Miles: 26,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Kia" data-color="White" data-price="17000" data-mileage="28000" data-year="2018">
+        <img src="./assets/images/Kia_Sorento_18.jpg" alt="Kia Sorento 2018">
+        <h1>Kia Sorento 2018</h1>
+        <p class="price">$17,000</p>
+        <p class="mileage">Miles: 28,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Lexus" data-color="White" data-price="26000" data-mileage="29000" data-year="2017">
+        <img src="./assets/images/Lexus_ES_17.jpg" alt="Lexus ES 2017">
+        <h1>Lexus ES 2017</h1>
+        <p class="price">$26 ,000</p>
+        <p class="mileage">Miles: 29,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Mazda" data-color="Blue" data-price="19000" data-mileage="32000" data-year="2017">
+        <img src="./assets/images/Mazda_CX-5_17.jpg" alt="Mazda CX-5 2017">
+        <h1>Mazda CX-5 2017</h1>
+        <p class="price">$19,000</p>
+        <p class="mileage">Miles: 32,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Porsche" data-color="Cayenne" data-price="68000" data-mileage="22000" data-year="2020">
+        <img src="./assets/images/Porsche_Cayenne_20.jpg" alt="Porsche Cayenne 2020">
+        <h1>Porsche Cayenne 2020</h1>
+        <p class="price">$68,000</p>
+        <p class="mileage">Miles: 22,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Subaru" data-color="Green" data-price="14000" data-mileage="60000" data-year="2014">
+        <img src="./assets/images/Subaru_Outback_14.jpg" alt="Subaru Outback 2014">
+        <h1>Subaru Outback 2014</h1>
+        <p class="price">$14,000</p>
+        <p class="mileage">Miles: 60,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+      <div class="card" data-make="Volkswagen" data-color="Gray" data-price="15000" data-mileage="40000" data-year="2016">
+        <img src="./assets/images/Volkswagon_Passat_16.jpg" alt="Volkswagon Passat 2016">
+        <h1>Volkswagen Passat 2016</h1>
+        <p class="price">$15,000</p>
+        <p class="mileage">Miles: 40,000</p>
+        <p><button>Add to cart</button></p>
+      </div>
+    </section>
+  </main>
+  <script src="./js/index.js" defer></script>
+</body>
+</html>
